@@ -8,3 +8,6 @@ Game Mechanics: player 1 uses arrow keys, player 2 uses aswd keys: they use thos
 File Structure: Just different assets, such as the art and the font used for the project 
 
 You can play the game here: https://reetbansal.neocities.org/game/spaceracehome 
+
+If you want to play the game locally: 
+Simply download the code and open up the live server. 
