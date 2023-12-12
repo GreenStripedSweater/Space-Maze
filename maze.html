@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="maze.css">
+    <link rel="stylesheet" type="text/css" href="treasures.css">
+    <link rel="stylesheet" href="spaceracepages.css" type="text/css">
+
+    <meta charset="utf-8">
+    <title>Space Maze</title>
+
+    <!-- Link to the Font File -->
+    <style>
+        @font-face {
+            font-family: 'Botsmatic'; /* Choose a name for your font */
+            src: url('botsmatic-font/Botsmatic3d-Exl8.ttf') format('truetype'); /* Specify the path to your font file */
+            /* Add additional formats for cross-browser compatibility if needed */
+            font-family: 'Botsmaticfill'; /* Choose a name for your font */
+            src: url('botsmatic-font/BotsmaticDemo-MXOr.ttf') format('truetype'); /* Specify the path to your font file */
+        }
+        
+        body {
+            font-family: 'Botsmatic', 'Botsmaticfill', sans-serif; /* Use the font in your styles */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+
+        <div id="maze">
+            <div id="box1" class="box">
+                <img src="players/p1spaceshippixel-30x30.png" alt="player 1">
+            </div>
+            <div id="box2" class="box">
+                <img src="players/p2spaceshippixel-30x30.png" alt="player 2">
+            </div>
+    
+            <div id="collection">
+                <div id="tre1" class="treasure"></div>
+                <div id="tre2" class="treasure"></div>
+                <div id="tre3" class="treasure"></div>
+                <div id="tre4" class="treasure"></div>
+                <div id="tre5" class="treasure"></div>
+                <div id="tre6" class="treasure"></div>
+                <div id="tre7" class="treasure"></div>
+                <div id="tre8" class="treasure"></div>
+                <div id="tre9" class="treasure"></div>
+                <div id="tre10" class="treasure"></div>
+                <div id="tre11" class="treasure"></div>
+                <div id="tre12" class="treasure"></div>
+                <div id="tre13" class="treasure"></div>
+            </div>
+            <img src="art/output-onlinetools.png" alt="background" id="mazeBg">
+
+        <!-- Define the maze structure using HTML elements -->
+        <!--all the ones that start in the first column-->
+
+            <div id="theWalls">
+
+                <div id="c1" class="wall"></div>
+                <div id="e1" class="wall"></div>
+                <div id="g1" class="wall"></div>
+                <div id="h1" class="wall"></div>
+                <div id="i1" class="wall"></div>
+                <div id="k1" class="wall"></div>
+                <div id="l1" class="wall"></div>
+                <div id="m1" class="wall"></div>
+                <div id="n1" class="wall"></div>
+                
+                <!--all the ones that start in the 2nd column-->
+                <div id="d2" class="wall" class="r2"></div>
+                
+                <!--all the ones that start in the 3d column-->
+                <div id="b3" class="wall"></div>
+                <div id="f3" class="wall"></div>
+                <div id="h3" class="wall"></div>
+                <div id="j3" class="wall"></div>
+                <div id="k3" class="wall"></div>
+
+                <!--all the ones that start in the 4th column-->
+                <div id="c4" class="wall"></div>
+                <div id="g4" class="wall"></div>
+                <div id="i4" class="wall"></div>
+                <div id="m4" class="wall"></div>
+                
+                <!--all the ones that start in the 5th column-->
+                <div id="b5" class="wall"></div>
+                <div id="e5" class="wall"></div>
+                <div id="l5" class="wall"></div> 
+                
+                <!--all the ones that start in the 6thlumn-->
+                <div id="c6" class="wall"></div>
+                <div id="f6" class="wall"></div>
+                <div id="g6" class="wall"></div>
+                <div id="h6" class="wall"></div>
+                <div id="j6" class="wall"></div>     
+                <div id="k6" class="wall"></div>
+                <div id="n6" class="wall"></div>     
+                
+                <!--all the ones that start in the 7thlumn-->
+                <div id="b7" class="wall"></div>
+                <div id="e7" class="wall"></div>
+                <div id="i7" class="wall"></div>
+                <div id="l7" class="wall"></div>  
+                
+                <!--all the ones that start in the 8thlumn-->
+                <div id="c8" class="wall"></div>
+                <div id="g8" class="wall"></div>
+                <div id="j8" class="wall"></div>
+                <div id="k8" class="wall"></div>      
+
+                <!--all the ones that start in the 9thlumn-->
+                <div id="d9" class="wall"></div>
+                <div id="h9" class="wall"></div>
+                <div id="n9" class="wall"></div>     
+            
+                <!--all the ones that start in the 10thlumn-->
+                <div id="m10" class="wall"></div>      
+                
+                <!--all the ones that start in the 11thlumn-->
+                <div id="b11" class="wall"></div>
+                <div id="d11" class="wall"></div>
+                <div id="h11" class="wall"></div>
+                <div id="j11" class="wall"></div>
+                <div id="l11" class="wall"></div>     
+                <div id="n11" class="wall"></div>
+
+                <!--all the ones that start in the 12thlumn-->
+                <div id="c12" class="wall"></div>
+                <div id="g12" class="wall"></div>
+                <div id="i12" class="wall"></div>
+
+
+                <!--all the ones that start in the 13thlumn-->
+                <div id="d13" class="wall"></div>
+                <div id="h13" class="wall"></div>
+                <div id="m13" class="wall"></div>
+
+
+                <!--all the ones that start in the 13thlumn-->
+                <div id="e14" class="wall"></div>
+                <div id="g14" class="wall"></div>
+                <div id="j14" class="wall"></div>
+                <div id="k14" class="wall"></div>
+                <div id="n14" class="wall"></div>     
+            
+
+                <!--now i gotta do all the rows :( -->
+
+                <!--all the ones that start in the 2nd row-->
+                <div id="r2f" class="wall"></div>
+                <div id="r2i" class="wall"></div>
+
+                <!--all the ones that start in the 3nd row-->
+                <div id="r3c" class="wall"></div>
+                <div id="r3f" class="wall"></div>
+                <div id="r3k" class="wall"></div>
+                <div id="r3n" class="wall"></div>
+
+                <!--all the ones that start in the 4nd row-->
+                <div id="r4a" class="wall"></div>
+                <div id="r4c" class="wall"></div>
+                <div id="r4f" class="wall"></div>
+                <div id="r4i" class="wall"></div>
+                <div id="r4l" class="wall"></div>
+
+                <!--all the ones that start in the 5nd row-->
+                <div id="r5b" class="wall"></div>
+                <div id="r5h" class="wall"></div>
+                <div id="r5l" class="wall"></div>
+                <div id="r5n" class="wall"></div>
+
+                <!--all the ones that start in the 6th row-->
+                <div id="r6a" class="wall"></div>
+                <div id="r6c" class="wall"></div>
+                <div id="r6g" class="wall"></div>
+                <div id="r6j" class="wall"></div>
+
+                <!--all the ones that start in the 7th row-->
+                <div id="r7a" class="wall"></div>
+                <div id="r7d" class="wall"></div>
+                <div id="r7h" class="wall"></div>
+                <div id="r7k" class="wall"></div>
+                <div id="r7n" class="wall"></div>
+
+                <!--all the ones that start in the 8th row-->
+                <div id="r8d" class="wall"></div>
+                <div id="r8i" class="wall"></div>
+                <div id="r8m" class="wall"></div>
+
+                <!--all the ones that start in the 7th row-->
+                <div id="r9a" class="wall"></div>
+                <div id="r9d" class="wall"></div>
+                <div id="r9f" class="wall"></div>
+                <div id="r9k" class="wall"></div>
+                <div id="r9m" class="wall"></div>
+
+                <!--all the ones that start in the 10th row-->
+                <div id="r10a" class="wall"></div>
+                <div id="r10e" class="wall"></div>
+                <div id="r10g" class="wall"></div>
+                <div id="r10i" class="wall"></div>
+                <div id="r10m" class="wall"></div>        
+
+                <!--all the ones that start in the 11th row-->
+                <div id="r11a" class="wall"></div>
+                <div id="r11g" class="wall"></div>
+                <div id="r11j" class="wall"></div>
+                <div id="r11m" class="wall"></div>
+
+                <!--all the ones that start in the 12th row-->
+                <div id="r12b" class="wall"></div>
+                <div id="r12f" class="wall"></div>
+                <div id="r12i" class="wall"></div>
+                <div id="r12k" class="wall"></div>
+
+                <!--all the ones that start in the 13th row-->
+
+                <div id="r13a" class="wall"></div>
+                <div id="r13d" class="wall"></div>
+                <div id="r13h" class="wall"></div>
+                <div id="r13j" class="wall"></div>
+
+
+                <!--all the ones that start in the 14th row-->
+                <div id="r14b" class="wall"></div>
+                <div id="r14e" class="wall"></div>
+                <div id="r14h" class="wall"></div>
+                <div id="r14k" class="wall"></div>
+            </div>
+
+        </div>
+
+
+        <div id="p1counter" class="theCounters">player 1 collected: 0</div>
+        <div id="p2counter" class="theCounters">player 2 collected: 0</div>
+
+        <a href="spaceraceinstructions.html" id="mazeInstructions" class="links">instructions</a>
+        <a href="spaceracehome.html" id="mazeHome" class="links">back</a>
+
+        <div id="winner">space maze</div>
+
+    </div>
+    <script src="maze.js"></script>
+</body>
+</html>
