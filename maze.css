@@ -42,7 +42,7 @@ body, html {
 
 #container {
     width: 1000px;
-    height: 850px;
+    height: 950px;
     position: relative;
     border: 1px solid #000;
     overflow: hidden;
@@ -54,7 +54,9 @@ body, html {
 #maze {
     width: 700px;
     height: 700px;
-    position: relative;
+    position: absolute;
+    top: 65px;
+    left: 150px;
     border: 1px solid #000;
     overflow: hidden;   
 }
